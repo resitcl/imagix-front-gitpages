@@ -1588,6 +1588,7 @@ article.article--people .article__avatar {
   overflow: hidden;
   margin-right: 20px;
   border: 2px solid #03a9f4;
+  min-width: 100px;
 }
 article.article--people .article__body {
   width: 100%;
@@ -2747,55 +2748,42 @@ header.header--static .header__nav ul li a {
   border: 2px solid #03a9f4;
   margin-bottom: 20px;
 }
-.modal .modal__content {
-  margin-bottom: 20px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-@media (min-width: 720px) {
-  .modal .modal__content {
-    padding: 0;
-  }
-}
-.modal .modal__content p:first-child {
-  line-height: 26px;
-  font-size: 16px;
-  color: #025989;
-}
-@media (min-width: 720px) {
-  .modal .modal__content p:first-child {
-    font-size: 18px;
-  }
-}
-.modal .form__button {
-  margin-top: 10px;
-}
-.modal .modal__button {
-  max-width: 300px;
-  margin: 0 auto;
-}
-.modal .modal__button a {
-  margin-bottom: 20px;
-}
 @media (min-width: 720px) {
   .modal .modal__flex {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: row;
         flex-direction: row;
+    -ms-flex-pack: center;
+        justify-content: center;
     -ms-flex-align: center;
         align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
   }
 }
-.modal .modal__body p {
+.modal .modal__body .modal__content {
+  max-width: 70%;
+  background-color: rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.07);
+  padding: 10px;
+}
+.modal .modal__body .modal__content .modal__title {
+  margin-bottom: 10px;
+}
+.modal .modal__body .modal__content p {
   margin-bottom: 5px;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 26px;
   text-align: left;
 }
-.modal .modal__body p span {
+.modal .modal__body .modal__content p span {
   padding-left: 10px;
   font-weight: bold;
+}
+.modal .modal__map {
+  text-align: center;
 }
 #sections {
   position: relative;
