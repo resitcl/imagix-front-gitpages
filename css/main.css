@@ -3065,17 +3065,22 @@ section.section--grayten {
 section.section--main {
   margin-top: 100px;
   overflow: initial;
-  margin-bottom: 200px;
-  height: 50vh;
+  height: 400px;
+}
+section.section--main .section__wrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 400px;
 }
 section.section--main .section__body {
   background-color: #fff;
   max-width: 800px;
-  margin: 0 auto;
   padding: 20px;
   text-align: center;
-  position: relative;
-  top: 35vh;
   box-shadow: 0px 4px 10px 0 rgba(74,74,74,0.3), 0 4px 10px rgba(0,0,0,0.08);
 }
 /*!
