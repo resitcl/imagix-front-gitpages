@@ -2785,6 +2785,20 @@ header.header--static .header__nav ul li a {
 .modal .modal__map {
   text-align: center;
 }
+.modal .modal__map .modal__ubication {
+  font-size: 28px;
+  line-height: 36px;
+  background-color: #03a9f4;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 20px;
+}
+.modal .modal__map .modal__ubication span {
+  text-decoration: underline;
+  margin-left: 10px;
+  font-weight: bold;
+  color: #fff;
+}
 #sections {
   position: relative;
   left: 0%;

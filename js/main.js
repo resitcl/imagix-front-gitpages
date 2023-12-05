@@ -926,14 +926,43 @@ app.modal = {
       skill = $(this).parents(".article--people").attr("data-skill");
       profile = $(this).parents(".article--people").find(".article__avatar img").attr("src");
       map = $(this).parents(".article--people").attr("data-map");
-      console.log(name, email, office, carrer, rol, asesor, skill);
-      $(".modal--people").find(".modal__title").text(name);
-      $(".modal--people").find(".modal__email span").text(email);
-      $(".modal--people").find(".modal__office span").text(office);
-      $(".modal--people").find(".modal__carrer span").text(carrer);
-      $(".modal--people").find(".modal__rol span").text(rol);
-      $(".modal--people").find(".modal__asesor span").text(asesor);
-      $(".modal--people").find(".modal__skill span").text(skill);
+      if (name === "") {
+        $(".modal--people").find(".modal__title").hide();
+      } else {
+        $(".modal--people").find(".modal__title").show();
+        $(".modal--people").find(".modal__title").text(name);
+      }
+      if (email === "") {
+        $(".modal--people").find(".modal__email").hide();
+      } else {
+        $(".modal--people").find(".modal__email span").show();
+        $(".modal--people").find(".modal__email span").text(email);
+      }
+      $(".modal--people").find(".modal__map .modal__ubication span").text(office);
+      if (carrer === "") {
+        $(".modal--people").find(".modal__carrer").hide();
+      } else {
+        $(".modal--people").find(".modal__carrer span").show();
+        $(".modal--people").find(".modal__carrer span").text(carrer);
+      }
+      if (rol === "") {
+        $(".modal--people").find(".modal__rol").hide();
+      } else {
+        $(".modal--people").find(".modal__rol span").show();
+        $(".modal--people").find(".modal__rol span").text(rol);
+      }
+      if (asesor === "") {
+        $(".modal--people").find(".modal__asesor").hide();
+      } else {
+        $(".modal--people").find(".modal__asesor span").show();
+        $(".modal--people").find(".modal__asesor span").text(asesor);
+      }
+      if (skill === "") {
+        $(".modal--people").find(".modal__skill").hide();
+      } else {
+        $(".modal--people").find(".modal__skill span").show();
+        $(".modal--people").find(".modal__skill span").text(skill);
+      }
       $(".modal--people").find(".modal__avatar img").attr("src", profile);
       $(".modal--people").find(".modal__map img").attr("src", map);
       return app.modal.open(".modal--people");
